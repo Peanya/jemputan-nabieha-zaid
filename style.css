@@ -1094,3 +1094,28 @@ h2 {
   }
 
 }
+
+/* =====================================
+   SECTION HEIGHT MINUS FOOTER
+===================================== */
+
+:root {
+  --footer-height: 70px;
+}
+
+/* SECTION 1, 2 & 4 */
+#cover,
+#details,
+#wishes {
+  min-height: calc(100svh - var(--footer-height));
+}
+
+/* Responsive Phone */
+@media (max-width: 480px) {
+  #cover,
+  #details,
+  #wishes {
+    min-height: calc(100svh - var(--footer-height));
+    padding-bottom: 80px;
+  }
+}
