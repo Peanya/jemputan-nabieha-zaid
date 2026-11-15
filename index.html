@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="ms">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f8fafc">
+  <title>Jemputan Perkahwinan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+  <script src="script.js" defer></script>
+</head>
+
+<body class="locked">
+  <div id="envelope-screen" class="envelope-screen" role="region" aria-label="Buka jemputan">
+    <p class="eyebrow">JEMPUTAN ISTIMEWA</p>
+    <div class="envelope" aria-hidden="true">
+      <div class="envelope-back"></div>
+      <div class="envelope-letter">Walimatul Urus</div>
+      <div class="envelope-flap"></div>
+      <div class="envelope-front"></div>
+      <div class="envelope-seal">♥</div>
+    </div>
+    <button id="open-invite" class="primary-btn">Buka Jemputan</button>
+    
+  </div>
+  <div id="invitation" hidden>
+    <main>
+      <section class="panel hero" id="cover">
+        <div class="section-decor" aria-hidden="true">
+
+          <img src="assets/watercolor-top.png"
+              class="decor watercolor-top" alt="">
+
+          <img src="assets/watercolor-bottom.png"
+              class="decor watercolor-bottom" alt="">
+
+          <!-- Gold Frame -->
+          <div class="gold-frame"></div>
+
+          <img src="assets/flower-top-right.png"
+              class="decor flower-top-right" alt="">
+
+          <img src="assets/flower-bottom-left.png"
+              class="decor flower-bottom-left" alt="">
+
+        </div>
+        <div class="panel-inner">
+          <p class="eyebrow">RAIKAN CINTA</p>
+          <h1 class="couple-name">
+
+            <span class="name">Nabieha</span>
+
+            <img
+              src="assets/ring.png"
+              class="ring-sprite"
+              alt=""
+              aria-hidden="true"
+            >
+
+            <span class="name">Zaid</span>
+
+          </h1>
+          <p class="date-line" data-event-date>19 DISEMBER 2026</p>
+        </div>
+      </section>
+      <section class="panel invitation" id="details">
+        <div class="section-decor" aria-hidden="true">
+
+
+              <img src="assets/watercolor-center.png"
+              class="decor watercolor-center" alt="">
+
+          <img src="assets/watercolor-bottom.png"
+              class="decor watercolor-bottom" alt="">
+
+
+
+        </div>
+        <div class="panel-inner">
+          <p class="bismillah" lang="ar" dir="rtl">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
+          <p class="eyebrow">WALIMATUL URUS</p>
+          <h2 class="couple-small">Rohana Binti Abdullah (Ibu) <br> &amp; <br> Mohd Rahani Bin Abdul Raof (Abang) </h2>
+          <p class="invitation-copy">Dengan penuh kesyukuran, kami menjemput Dato’/Datin/Tuan/Puan hadir ke majlis
+            perkahwinan puteri kami</p>
+          <h2 class="couple-small">Nuratika Nabeha Binti Abdul Raof<br>&amp; <br> Muhammad Zaid Bin Sawaluddin</h2>
+          <div class="event-meta">
+            <p><strong>Tempat</strong><span id="venue-text">Nama Dewan, Alamat Majlis</span></p>
+            <p><strong>Tarikh</strong><span data-event-date>19 Disember 2026</span></p>
+            <p><strong>Waktu</strong><span id="event-time">11:30 pagi – 4:30 petang</span></p>
+          </div><a id="calendar-link" class="outline-btn" href="#" target="_blank" rel="noopener noreferrer"> <span
+              aria-hidden="true"></span> Simpan Tarikh</a>
+        </div>
+      </section>
+      <section class="panel itinerary" id="schedule">
+        <div class="section-decor" aria-hidden="true">
+
+        <!-- GOLD OUTLINE -->
+        <div class="gold-frame" aria-hidden="true"></div>
+
+
+        <img src="assets/watercolor-bottom.png"
+            class="decor watercolor-bottom" alt="">
+
+
+
+      </div>
+        <div class="panel-inner">
+          <p class="eyebrow"></p>
+          <h2>Aturcara Majlis</h2>
+          <ol class="timeline">
+            <li><span>11:30 pagi</span><strong>Kehadiran Tetamu</strong></li>
+            <li><span>2:00 tengah hari</span><strong>Ketibaan Pengantin</strong></li>
+            <li><span>2:30 petang</span><strong>Makan Beradab</strong></li>
+            <li><span>4:30 petang</span><strong>Majlis Tamat</strong></li>
+          </ol>
+          
+        </div>
+      </section>
+      <section class="panel guestbook" id="wishes">
+        <div class="section-decor" aria-hidden="true">
+          <img src="assets/watercolor-top.png"
+              class="decor watercolor-top" alt="">
+
+          <img src="assets/watercolor-bottom.png"
+              class="decor watercolor-bottom" alt="">
+
+          <img src="assets/flower-top2.png"
+              class="decor flower-top2" alt="">
+
+          <img src="assets/flower-bottom2.png"
+              class="decor flower-bottom2" alt="">
+        </div>
+        
+        <div class="panel-inner">Ya Allah Ya Rahman Ya Rahim, <br> berkatilah majlis perkahwinan ini. Limpahkanlah baraqah dan rahmatMu kepada keluarga mempelai ini. Kekalkanlah jodoh mereka hingga ke Jannah.
+          <p class="prayer">Semoga Allah memberkati perkahwinan ini, melimpahkan kasih sayang dan kebahagiaan hingga ke
+            syurga. Amin.</p>
+          <p class="hashtag">#NabiehaZaid</p>
+          <h3>Ucapan</h3>
+          <div id="wish-list" class="wish-list" tabindex="0" aria-label="Ucapan tetamu">
+            <p class="muted">Ucapan sedang dimuatkan…</p>
+          </div><button class="primary-btn" data-open-rsvp>Sahkan Kehadiran</button>
+        </div>
+      </section>
+    </main>
+    <nav class="bottom-nav" aria-label="Pautan pantas">
+      <button
+        id="contact-button"
+        type="button"
+        aria-haspopup="dialog"
+        aria-controls="contact-modal"
+      >
+        <span aria-hidden="true">☎</span>
+        <small>Hubungi</small>
+      </button>
+      <a id="map-link"
+        href="https://maps.app.goo.gl/rvWoUh8BuqxcRCQd6?g_st=ac" target="_blank" rel="noopener noreferrer"><span
+          aria-hidden="true">⌖</span><small>Lokasi</small></a><button type="button" data-open-rsvp><span
+          aria-hidden="true">✉</span><small>RSVP</small></button></nav>
+  </div>
+  <div id="rsvp-modal" class="modal" hidden>
+    <div class="modal-backdrop" data-close-rsvp></div>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title"><button class="modal-close"
+        type="button" data-close-rsvp aria-label="Tutup">×</button>
+      <h2 id="modal-title">Sahkan Kehadiran</h2>
+      <form id="rsvp-form"><label for="guest-name">Nama penuh</label><input id="guest-name" maxlength="80" required
+          autocomplete="name"><label for="guest-phone">Nombor telefon</label><input id="guest-phone" type="tel"
+          inputmode="tel" maxlength="20" placeholder="01XXXXXXXX" required autocomplete="tel"><label
+          for="attendance">Kehadiran</label><select id="attendance" required>
+          <option value="1">Hadir</option>
+          <option value="0">Tidak hadir</option>
+        </select>
+        <div id="count-field"><label for="guest-count">Jumlah kehadiran (termasuk diri sendiri)</label><select
+            id="guest-count">
+            <option value="1">1 orang</option>
+            <option value="2">2 orang</option>
+            <option value="3">3 orang</option>
+          </select></div><label for="guest-message">Ucapan untuk pengantin</label><textarea id="guest-message"
+          maxlength="500" rows="3" placeholder="Doa dan ucapan anda…"></textarea>
+        <p id="form-status" class="form-status" role="status"></p><button id="save-rsvp" type="submit"
+          class="primary-btn">Hantar RSVP &amp; Ucapan</button><button id="delete-rsvp" type="button" class="danger-btn"
+          hidden>Padam RSVP &amp; Ucapan</button>
+      </form>
+    </div>
+  </div>
+  <!-- ======================================
+     CONTACT POPUP
+======================================= -->
+
+<div id="contact-modal" class="modal" hidden>
+
+  <div
+    class="modal-backdrop"
+    data-close-contact
+  ></div>
+
+  <div
+    class="modal-card contact-modal-card"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="contact-modal-title"
+  >
+
+    <button
+      type="button"
+      class="modal-close"
+      data-close-contact
+      aria-label="Tutup"
+    >
+      ×
+    </button>
+
+    <h2 id="contact-modal-title">Hubungi Kami</h2>
+
+    <div class="contact-list">
+
+      <!-- CONTACT 1 -->
+      <div class="contact-item">
+
+        <div class="contact-info">
+          <strong>Rohana</strong>
+          <span>+6011-3711 7205</span>
+        </div>
+
+        <div class="contact-actions">
+          <a href="tel:+6011-3711 7205" aria-label="Call Wakil Keluarga 1">
+            <span aria-hidden="true">☎</span>
+            <small>Call</small>
+          </a>
+
+          <a
+            href="https://wa.me/601137117205"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WhatsApp Wakil Keluarga 1"
+          >
+            <span aria-hidden="true">✉</span>
+            <small>WhatsApp</small>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- CONTACT 2 -->
+      <div class="contact-item">
+
+        <div class="contact-info">
+          <strong>Fazira</strong>
+          <span>+6011-6366 2017</span>
+        </div>
+
+        <div class="contact-actions">
+          <a href="tel:+6011-6366 2017" aria-label="Call Wakil Keluarga 2">
+            <span aria-hidden="true">☎</span>
+            <small>Call</small>
+          </a>
+
+          <a
+            href="https://wa.me/601163662017"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WhatsApp Wakil Keluarga 2"
+          >
+            <span aria-hidden="true">✉</span>
+            <small>WhatsApp</small>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- CONTACT 3 -->
+      <div class="contact-item">
+
+        <div class="contact-info">
+          <strong>Mohd Sahfiq</strong>
+          <span>+6013-219 2599</span>
+        </div>
+
+        <div class="contact-actions">
+          <a href="tel:+6013-219 2599" aria-label="Call Wakil Keluarga 3">
+            <span aria-hidden="true">☎</span>
+            <small>Call</small>
+          </a>
+
+          <a
+            href="https://wa.me/60132192599"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WhatsApp Wakil Keluarga 3"
+          >
+            <span aria-hidden="true">✉</span>
+            <small>WhatsApp</small>
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+  <audio id="background-music" src="assets/lagu.mp3" preload="none" loop></audio>
+</body>
+
+</html>
