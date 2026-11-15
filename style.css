@@ -976,11 +976,35 @@ h2 {
   pointer-events: none;
 }
 
-#cover .flower-top-right,
-#cover .flower-bottom-left {
+/* =====================================
+   SECTION 1 - FLOWER DECORATION
+===================================== */
+
+/* Bunga kanan atas */
+#cover .flower-top-right {
+  width: 300px;
+  max-width: none;
+  height: auto;
+
+  top: -20px;
+  right: -25px;
+  bottom: auto;
+
   z-index: 3;
 }
 
+/* Bunga kiri bawah */
+#cover .flower-bottom-left {
+  width: 350px;
+  max-width: none;
+  height: auto;
+
+  bottom: -20px;
+  left: -50px;
+  top: auto;
+
+  z-index: 3;
+}
 /* GOLD FRAME - SECTION 1 & SECTION 3 */
 
 #cover .gold-frame,
@@ -1049,4 +1073,24 @@ h2 {
 #schedule .panel-inner {
   position: relative;
   z-index: 4;
+}
+
+/* =====================================
+   SECTION 1 - MOBILE FLOWERS
+===================================== */
+
+@media (max-width: 480px) {
+
+  #cover .flower-top-right {
+    width: 250px;
+    top: -15px;
+    right: -35px;
+  }
+
+  #cover .flower-bottom-left {
+    width: 280px;
+    bottom: -15px;
+    left: -45px;
+  }
+
 }
