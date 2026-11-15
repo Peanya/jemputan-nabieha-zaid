@@ -3,7 +3,7 @@
 const CONFIG = {
   supabaseUrl: 'https://mbshxhcyngdkasjbzfje.supabase.co',
   supabaseKey: 'sb_publishable_WMmUg8CBFPrudhgEgV45gg_fSdIpMsX',
-  eventTitle: 'Majlis Perkahwinan Aiman & Sofia',
+  eventTitle: 'Walimatul Urus Nabieha & Zaid',
   eventStart: '20261219T110000', // local Malaysia time
   eventEnd: '20261219T160000',
   venue: '116, Jalan Bunga Lili, Felda Pasak, 81900 Kota Tinggi, Johor',
