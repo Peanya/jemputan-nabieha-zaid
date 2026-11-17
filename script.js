@@ -256,4 +256,28 @@ function setupSectionFade() {
   document.body.classList.add('fade-ready');
 }
 
+/* =====================================
+   SECTION 1 - SCROLL INSTRUCTION
+===================================== */
+
+const scrollHint = document.getElementById("scroll-hint");
+const coverSection = document.getElementById("cover");
+
+if (scrollHint && coverSection) {
+  let hasScrolledDown = false;
+
+  function updateScrollHint() {
+    if (!hasScrolledDown && window.scrollY > 30) {
+      hasScrolledDown = true;
+      scrollHint.classList.add("is-hidden");
+    }
+  }
+
+  window.addEventListener("scroll", updateScrollHint, {
+    passive: true
+  });
+
+  updateScrollHint();
+}
+
 setupSectionFade();

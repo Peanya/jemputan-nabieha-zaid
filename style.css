@@ -298,8 +298,10 @@ h2 {
 }
 
 .hashtag {
+    font-family: 'Times New Roman', serif;
     color: var(--deep);
-    font-weight: 600
+    font-weight: 600;
+    font-style: italic;
 }
 
 .guestbook h3 {
@@ -1117,5 +1119,71 @@ h2 {
   #wishes {
     min-height: calc(100svh - var(--footer-height));
     padding-bottom: 80px;
+  }
+}
+
+/* =====================================
+   SECTION 1 - SCROLL INSTRUCTION
+===================================== */
+
+#cover .scroll-hint {
+  position: absolute;
+  bottom: 4px;
+  right: 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+
+  z-index: 10;
+  pointer-events: none;
+
+  color: var(--deep);
+  font-family: "DM Sans", sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Anak panah bergerak */
+#cover .scroll-arrow {
+  font-size: 15px;
+  line-height: 1;
+  animation: scrollBounce 1.5s ease-in-out infinite;
+}
+
+@keyframes scrollBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+/* Hilang selepas scroll */
+#cover .scroll-hint.is-hidden {
+  opacity: 0;
+  transform: translateY(12px);
+  visibility: hidden;
+}
+
+/* Phone */
+@media (max-width: 480px) {
+  #cover .scroll-hint {
+    bottom: 90px;
+    right: 30px;
+    font-size: 10px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #cover .scroll-arrow {
+    animation: none;
   }
 }
