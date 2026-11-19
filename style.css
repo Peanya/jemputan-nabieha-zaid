@@ -1126,23 +1126,31 @@ h2 {
    SECTION 1 - SCROLL INSTRUCTION
 ===================================== */
 
+/* SECTION 1 - SCROLL INSTRUCTION */
+
+#cover {
+  position: relative;
+}
+
 #cover .scroll-hint {
   position: absolute;
-  bottom: 4px;
-  right: 10px;
+
+  bottom: 10px;
+  right: 25px;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2px;
+  gap: 3px;
 
   z-index: 10;
   pointer-events: none;
 
   color: var(--deep);
   font-family: "DM Sans", sans-serif;
-  font-size: 10px;
-  letter-spacing: 0.08em;
+  font-size: 12px;
+  font-style: italic;
+  letter-spacing: 0.05em;
 
   opacity: 1;
   transform: translateY(0);
@@ -1171,19 +1179,4 @@ h2 {
   opacity: 0;
   transform: translateY(12px);
   visibility: hidden;
-}
-
-/* Phone */
-@media (max-width: 480px) {
-  #cover .scroll-hint {
-    bottom: 90px;
-    right: 30px;
-    font-size: 10px;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  #cover .scroll-arrow {
-    animation: none;
-  }
 }
